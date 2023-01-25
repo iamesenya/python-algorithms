@@ -1,0 +1,25 @@
+eng
+
+The algorithm of the least squares method on the example of data approximation of a linear function. 
+The least squares method is the minimum sum of squared error deviations. The coefficients of the approximating function are calculated in such a way that the standard deviation of the experimental data from the found approximating function is the smallest. 
+In the program, k and b are the parameters of our linear function.
+Next, we form a theoretical curve using array. The array module defines the type of object that can compactly represent an array of values of basic types: symbols, integers, floating-point numbers.
+Then we form the experimental values of y. To do this, we add random points to the theoretical curve (f), which are distributed according to the normal distribution (np.random.normal), which have zero mathematical expectation and standard deviation (sigma) and how many such quantities we will model (N). That is, f is a vector, np.random.normal(0, sigma, N) is also a vector, we add one vector with another vector and get experimental values of y at the output. Now let's display this as a graph.  We entered x as an ordinary one-dimensional array and set a function for a straight line f, executing the program we got a graph with a straight line and a set of points. 
+Using the matplotlib library, we displayed these two graphs.
+The plt.plot(f) function displayed our straight line, and using the plt.scatter(x, y, s=2, c='red') function, we displayed individual points. y is the value of the points vertically, x is the value of the points horizontally, s=2 is the size of the points, c='red' is the color. 
+Now we construct estimates from the coefficients k and b. We believe that they are still unknown, but only the observations of y are known, and from these observations we will find the values of k and b. 
+Let's use the least squares method. 
+To begin with, let's calculate the parameters a11, a2, mx, my. After we have calculated the values, we can calculate the parameter estimates and build a line graph. Then we run the program and see two straight lines. The red graph is an experimental straight line, and the blue one is a theoretical straight line and they practically converged, as a result, good estimates for k and b turned out.
+
+rus
+
+Алгоритм метода наименьших квадратов на примере аппроксимации данных линейной функции. 
+Метод наименьших квадратов – минимум сумма квадратов ошибок отклонений. Коэффициенты аппроксимирующей функции вычисляются таким образом, чтобы среднеквадратичное отклонение экспериментальных данных от найденной аппроксимирующей функции было наименьшим. 
+В программе k и b – параметры нашей линейной функции.
+Далее мы формируем теоретическую кривую с использованием array. Модуль array определяет тип объекта, который может компактно представлять массив значений базовых типов: символы, целые числа, числа с плавающей запятой.
+Затем мы формируем экспериментальные значения y. Для этого мы к теоретической кривой (f) добавляем случайные точки, которые распределены по нормальному распределению (np.random.normal), у которых нулевое математическое ожидание и стандартное отклонение (sigma) и сколько таких величин мы будем моделировать (N). То есть f – вектор, np.random.normal(0, sigma, N) – также вектор, мы один вектор складываем с другим вектором и на выходе получаем экспериментальные значения y. Теперь отобразим это в виде графика.  Мы ввели x как обычный одномерный массив и задали функцию для прямой f, выполнив программу мы получили график с прямой и набором точек. 
+С помощью библиотеки matplotlib мы отобразили эти два графика.
+Функция plt.plot(f) отобразила нашу прямую, а с помощью функции plt.scatter(x, y, s=2, c='red') мы отобразили отдельные точки. y – значение точек по вертикали, x – значение точек по горизонтали, s=2 – размер точек, c='red' – цвет. 
+Теперь строим оценки от коэффициентов k и b. Считаем, что пока они неизвестны, а известны только наблюдения y и по этим наблюдениям мы найдем значения k и b. 
+Воспользуемся методом наименьших квадратов. 
+Для начала вычислим параметры a11, a2, mx, my. После того, как мы вычислили величины, мы можем вычислить оценки параметров и построить линейный график. Затем мы запускаем программу и увидим две прямые. Красный график – экспериментальная прямая, а синий теоретическая прямая и они практически сошлись, в итоге получились хорошие оценки для k и b.
